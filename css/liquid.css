@@ -1,13 +1,15 @@
-*{
+* {
     text-shadow: inherit;
 }
-body{
+
+body {
     background-color: rgba(38, 16, 66, 1);
     color: rgb(243, 243, 243);
     font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
 }
+
 nav {
     height: 50px;
     background-color: rgb(165, 122, 222);
@@ -19,14 +21,16 @@ nav {
     top: 0;
     z-index: 2;
     width: 100%;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
 }
-nav ul{
+
+nav ul {
     display: flex;
     width: 750px;
     height: 100%;
 }
-nav li{
+
+nav li {
     box-shadow: -5px 0px 12px -8px rgba(38, 16, 66, 0.636)inset;
     width: 100%;
     display: flex;
@@ -34,14 +38,17 @@ nav li{
     align-items: center;
     font-size: 15px;
 }
-nav li:nth-child(4){
+
+nav li:nth-child(4) {
     background-color: rgba(197, 162, 250, 1);
 }
-nav a{
-    color: rgb(238, 238, 238); 
+
+nav a {
+    color: rgb(238, 238, 238);
     text-decoration: none;
 }
-h1{
+
+h1 {
     height: 100%;
     width: 250px;
     display: flex;
