@@ -1,5 +1,6 @@
 * {
     text-shadow: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -7,7 +8,9 @@ body {
     color: rgb(243, 243, 243);
     font-family: "Inter", sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
 }
 
 nav {
@@ -56,4 +59,45 @@ h1 {
     align-items: center;
     font-size: 25px;
     font-weight: bolder;
+}
+
+main.liquids {
+    display: flex;
+    flex-direction: column;
+    background-color: #A47ADE;
+    width: clamp(70vw, 70vw, 1000px);
+    margin: 20px;
+    border-radius: 20px;
+    min-height: 50dvh;
+
+
+
+}
+
+main.liquids h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 20px;
+    font-weight: 600;
+}
+
+main.liquids .liquid-type {
+    width: 100%;
+    margin: 10px;
+
+}
+
+main.liquids .liquid-type h3 {
+    min-width: 30%;
+    width: fit-content;
+    border-bottom: 1.5px  #ffffff9d solid;
+    padding: 2px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+main.liquids .liquid-type ul li {
+    margin: 5px 0;
 }
