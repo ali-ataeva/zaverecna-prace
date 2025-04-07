@@ -155,3 +155,8 @@ article h2{
 .sport li:last-child{
     margin-bottom: 0px;
 }
+@media (max-width: 900px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+  }
