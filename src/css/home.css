@@ -27,7 +27,7 @@ body {
 
 nav {
     height: 50px;
-    background-color: rgb(165, 122, 222);
+    background-color: #a57ade;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -218,7 +218,6 @@ article h2 {
     
     nav ul {
         width: 100%;
-        flex-wrap: wrap;
     }
     
     nav li {

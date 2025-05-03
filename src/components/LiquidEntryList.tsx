@@ -32,7 +32,7 @@ export default function LiquidEntryList() {
   }, {} as Record<LiquidEntry['type'], LiquidEntry[]>);
 
   return (
-    <main className="liquids">
+    <main className="liquids column-main">
       <h2>Today's Liquid Intake</h2>
       {Object.entries(liquidsByType).map(([type, liquids]) => (
         <section key={type} className="liquid-type">

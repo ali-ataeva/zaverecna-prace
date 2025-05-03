@@ -91,6 +91,7 @@ h1 a {
     margin: 80px auto 40px;
     gap: 30px;
     padding: 20px;
+    justify-content: center;
 }
 
 /* Form styling */
@@ -281,6 +282,9 @@ h1 a {
         width: 200px;
         font-size: 20px;
     }
+    .liquid-page {
+        flex-direction: column !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -302,4 +306,9 @@ h1 a {
     .liquid-type {
         padding: 0 5px;
     }
+}
+
+main.column-main {
+    display: flex;
+    flex-direction: column;
 }
