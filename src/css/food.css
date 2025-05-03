@@ -1,13 +1,29 @@
-*{
+* {
     text-shadow: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background-color: rgba(38, 16, 66, 1);
     color: rgb(243, 243, 243);
     font-family: "Inter", sans-serif;
-    display: flex;
-    justify-content: center;
 }
+
+#root {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 nav {
     height: 50px;
     background-color: rgb(165, 122, 222);
@@ -21,27 +37,38 @@ nav {
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);   
 }
-nav ul{
+
+nav ul {
     display: flex;
     width: 750px;
     height: 100%;
+    list-style: none;
 }
-nav li{
-    box-shadow: -5px 0px 12px -8px rgba(38, 16, 66, 0.636)inset;
+
+nav li {
+    box-shadow: -5px 0px 12px -8px rgba(38, 16, 66, 0.636) inset;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
 }
-nav li:first-child{
+
+nav li:first-child {
     background-color: rgba(197, 162, 250, 1);
 }
-nav a{
+
+nav a {
     color: rgb(238, 238, 238); 
     text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-h1{
+
+h1 {
     height: 100%;
     width: 250px;
     display: flex;
@@ -49,4 +76,257 @@ h1{
     align-items: center;
     font-size: 25px;
     font-weight: bolder;
+}
+
+h1 a {
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+}
+
+/* Food page layout */
+.food-page {
+    display: flex;
+    flex-direction: row;
+    width: min(90vw, 1000px);
+    margin: 80px auto 40px;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Form and entry list containers */
+.food-form, .entry-list {
+    background-color: rgb(165, 122, 222);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.217);
+    width: 100%;
+}
+
+.food-form h3, .entry-list h3 {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+    color: rgb(243, 243, 243);
+}
+
+/* Quick add section */
+.quick-add-section {
+    margin-bottom: 25px;
+}
+
+.quick-add-section h4 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: rgb(234, 234, 234);
+    font-weight: 500;
+}
+
+.quick-add-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.quick-add-btn {
+    background-color: rgba(197, 162, 250, 1);
+    border: none;
+    color: rgb(243, 243, 243);
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+}
+
+.quick-add-btn:hover {
+    background-color: rgba(197, 162, 250, 0.8);
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: rgb(234, 234, 234);
+    font-size: large;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(234, 234, 234, 0.3);
+    border-radius: 8px;
+    background-color: rgba(243, 243, 243, 0.1);
+    color: rgb(243, 243, 243);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: rgba(197, 162, 250, 1);
+    background-color: rgba(243, 243, 243, 0.15);
+}
+
+.form-group input::placeholder {
+    color: rgba(234, 234, 234, 0.7);
+}
+
+.macros-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.submit-btn {
+    background-color: rgba(197, 162, 250, 1);
+    color: rgb(243, 243, 243);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.2s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.115);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: rgba(197, 162, 250, 0.8);
+}
+
+/* Entry list styles */
+.no-entries {
+    text-align: center;
+    color: rgb(234, 234, 234);
+    font-style: italic;
+    padding: 20px;
+    font-size: large;
+}
+
+.entries {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.entry-item {
+    background-color: rgba(243, 243, 243, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(234, 234, 234, 0.2);
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.entry-header h4 {
+    margin: 0;
+    color: rgb(243, 243, 243);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.timestamp {
+    font-size: 14px;
+    color: rgb(234, 234, 234);
+}
+
+.entry-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calories {
+    font-weight: bold;
+    color: rgb(243, 243, 243);
+    font-size: large;
+}
+
+.macros {
+    display: flex;
+    gap: 0;
+}
+
+.macros span {
+    border-left: solid rgb(234, 234, 234) 1px;
+    padding: 0px 8px; 
+    color: rgb(234, 234, 234);
+}
+
+.macros span:first-child {
+    border: none;
+    padding-left: 0px;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(234, 234, 234);
+}
+
+@media (max-width: 768px) {
+    .food-page {
+        width: 95vw;
+        margin: 70px auto 20px;
+        padding: 15px;
+    }
+    
+    .food-form, .entry-list {
+        padding: 30px 25px;
+    }
+    
+    .quick-add-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    
+    .macros-row {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+    
+    nav li {
+        font-size: 14px;
+    }
+    
+    h1 {
+        width: 200px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-page {
+        width: 100vw;
+        padding: 10px;
+    }
+    
+    .food-form, .entry-list {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .quick-add-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+    }
 }

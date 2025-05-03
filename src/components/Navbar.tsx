@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
     return (
         <nav>
-            <h1><a href="home">Calorie Tracker</a></h1>
+            <h1><Link to="/">Calorie Tracker</Link></h1>
             <ul>
-                <li><a href="food">Today's Intake</a></li>
-                <li><a href="sport">Sport Tracking</a></li>
-                <li><a href="liquid">Liquid Intake</a></li>
+                <li><Link to="/food">Today's Intake</Link></li>
+                <li><Link to="/sport">Sport Tracking</Link></li>
+                <li><Link to="/liquid">Liquid Intake</Link></li>
             </ul>
         </nav>
-    )
+    );
 }

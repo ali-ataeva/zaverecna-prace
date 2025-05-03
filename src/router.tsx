@@ -1,14 +1,19 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HealthProvider } from './contexts/HealthContext';
 import RootLayout from './RootLayout';
 import Home from './pages/Home';
 import Food from './pages/Food';
-
-
+import Liquid from './pages/Liquid';
+import Sport from './pages/Sport';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout/>,
+    element: (
+      <HealthProvider>
+        <RootLayout />
+      </HealthProvider>
+    ),
     children: [
       {
         index: true,
@@ -17,7 +22,15 @@ const router = createBrowserRouter([
       {
         path: 'food',
         element: <Food />,
-      }
+      },
+      {
+        path: 'liquid',
+        element: <Liquid />,
+      },
+      {
+        path: 'sport',
+        element: <Sport />,
+      },
     ],
   },
 ]);
