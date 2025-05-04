@@ -261,6 +261,7 @@ h1 a {
         width: 95vw;
         margin: 70px auto 20px;
         padding: 15px;
+        margin-top: 10px;
     }
     
     .sport-form, .entry-list {
